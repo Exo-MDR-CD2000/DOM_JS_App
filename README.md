@@ -12,9 +12,24 @@ Most of the Bootstrap code was lifted from a previous project such as the navbar
 
 ## Usage
 
-Clone the repo and open a live server in VS code. Alternatively, you can click on the deployed link to the right or down below:
+To get a local copy up and running follow these simple steps:
 
-- [Deployed Link](WIP)
+1. **Clone the repo**
+    ```sh
+    git clone https://github.com/Exo-MDR-CD2000/DOM_JS_App.git
+    ```
+2. **Navigate to the project directory**
+    ```sh
+    cd DOM_JS_App
+    ```
+3. **Install NPM packages**
+    ```sh
+    npm install
+    ```
+4. **Use VS Code Live Server**
+    ```sh
+    Open with live server
+    ```
 
 ## Link(s)
 
