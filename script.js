@@ -1,13 +1,20 @@
 // DOM stuff here
 
 document.addEventListener('DOMContentLoaded', () => {
-    const songForm = document.getElementById('songForm');
-    const songTableBody = document.querySelector('table tbody');
+    const songForm = document.querySelector('#songForm'); // targets song form
+    const songTableBody = document.querySelector('table tbody'); // targets table body
 
     // Load songs from local storage
     loadSongsFromLocalStorage();
 
-    // Handle form submission
+    /**
+     * songForm event listener below with a submit event
+     * Prevents default form submission (page reload)
+     * Grabs song data from form
+     * Adds song to table
+     * Saves song to local storage
+     * Resets form after submission
+     */
     songForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const songData = {
@@ -23,7 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
         songForm.reset();
     });
 
-    // Add song to table
+
+    /**
+     * addSongToTable function below
+     * We create a new row element
+     * then use innerHTML to add song data to the row
+     * Use appendChild to add the row to the table body
+     * There is documentation online about innerHTML security risks, but for this project it is fine
+     */
     function addSongToTable(songData) {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -64,3 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('songs', JSON.stringify(songs));
     }
 });
+
+
+// read into local storage tutorials and how to use it for submission
