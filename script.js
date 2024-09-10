@@ -1,6 +1,6 @@
 // DOM stuff here
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // waits for the DOM to load before running the code below. targets the document and listens for the DOMContentLoaded event
     const songForm = document.querySelector('#songForm'); // targets song form
     const songTableBody = document.querySelector('table tbody'); // targets table body
 
